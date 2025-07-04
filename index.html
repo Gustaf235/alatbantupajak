@@ -2,84 +2,19 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kalkulator Pajak Pro</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alat Bantu Pajak</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <h1>Kalkulator Pajak Pro</h1>
-    <p>Kalkulator Pajak Profesional untuk Bisnis Anda</p>
+    <h1>Alat Bantu Perpajakan</h1>
   </header>
-
-  <section id="unifikasi">
-    <h2>PPh Unifikasi</h2>
-    <table id="table-unifikasi">
-      <thead><tr>
-        <th>No Invoice</th><th>Perusahaan</th><th>Jenis Pajak</th>
-        <th>Tarif PPh(%)</th><th>DPP</th><th>Opsi PPN</th><th>Aksi</th>
-      </tr></thead>
-      <tbody></tbody>
-    </table>
-    <button id="add-row">+ Tambah Baris</button>
-    <button id="hitung-unifikasi">Hitung Pajak Unifikasi</button>
-    <button id="export-excel">Export ke Excel</button>
-    <div id="hasil-unifikasi"></div>
-  </section>
-
-  <section id="pph21">
-    <h2>PPh 21 (TER)</h2>
-    <form id="form-pph21">
-      <fieldset>
-        <legend>Data Personal</legend>
-        <label>Status Pegawai:
-          <select name="statusPegawai">
-            <option value="tetap">Pegawai Tetap</option>
-            <option value="pensiunan">Pensiunan</option>
-          </select>
-        </label>
-      </fieldset>
-
-      <fieldset>
-        <legend>A. Penghasilan</legend>
-        <label>Gaji / Pensiun:
-          <input type="number" name="gaji" />
-        </label>
-      </fieldset>
-
-      <fieldset>
-        <legend>B. Pengurangan</legend>
-        <label>Iuran Pensiun / JHT:
-          <input type="number" name="iuranPensiun" />
-        </label>
-      </fieldset>
-
-      <button type="reset">Reset</button>
-      <button type="button" id="hitung-pph21">Hitung</button>
-      <button type="button" id="export-pph21">Export PPh21</button>
-    </form>
-    <div id="hasil-pph21"></div>
-  </section>
-
-  <section id="donasi">
-    <h2>Dukung Pengembangan Aplikasi ❤️</h2>
-    <form id="form-donasi">
-      <label>Nominal (Rp):
-        <select name="nominal">
-          <option value="5000">5k</option>
-          <option value="18000">18k</option>
-          <option value="25000">25k</option>
-          <option value="100000">100k</option>
-        </select>
-      </label>
-      <label>Pesan:
-        <textarea name="pesan"></textarea>
-      </label>
-      <button type="submit">Lanjutkan Pembayaran</button>
-    </form>
-  </section>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-  <script src="scripts.js"></script>
+  <main>
+    <p>Gunakan alat ini untuk membantu perhitungan pajak secara otomatis.</p>
+    <button onclick="hitungPajak()">Hitung Pajak</button>
+    <div id="output"></div>
+  </main>
+  <script src="js/script.js"></script>
 </body>
 </html>
